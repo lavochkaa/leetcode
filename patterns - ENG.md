@@ -33,3 +33,10 @@
 - When: need to find something at the end of a string
 - Mistake: s.size() returns unsigned — on empty string s.size()-1 overflows → use (int)s.size()-1
 - Mistake: while loop without checking i >= 0 before s[i] — condition order matters
+
+## Plus One (#66)
+- Pattern: reverse iteration with carry
+- When: arithmetic on array of digits
+- How: digits[i]++ → if < 10 return → else set 0, continue
+- After loop: insert(begin(), 1) for case [9,9,9] → [1,0,0,0]
+- Learned: cout can't print vector directly, use range-based for
