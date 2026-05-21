@@ -27,3 +27,9 @@
 - After while → return left (insertion position)
 - Mistake: while (left < right) instead of while (left <= right) — missed the case when left == right
 - Mistake: recalculated mid in two places instead of once at the start of the loop
+
+## Length of Last Word (#58)
+- Pattern: iterate from end of string
+- When: need to find something at the end of a string
+- Mistake: s.size() returns unsigned — on empty string s.size()-1 overflows → use (int)s.size()-1
+- Mistake: while loop without checking i >= 0 before s[i] — condition order matters
