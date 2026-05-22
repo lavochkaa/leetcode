@@ -71,3 +71,11 @@
 - цикл до i <= rowIndex (не i < rowIndex)
 - push_back вне if блока — иначе строки 0 и 1 не добавятся
 - return result[rowIndex]
+
+## Best Time to Buy and Sell Stock (#121)
+- Паттерн: один проход + отслеживание минимума
+- min_price = prices[0], max_profit = 0
+- на каждом шаге: обновляй min, потом считай prices[i] - min
+- return max(0, max_profit)
+- ошибка: else if для min — обновлялся либо max либо min, не оба
+- ошибка: max_profit инициализировал не нулём — неверный старт

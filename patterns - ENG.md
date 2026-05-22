@@ -73,3 +73,11 @@
 - loop until i <= rowIndex (not i < rowIndex)
 - push_back outside if block — otherwise rows 0 and 1 never added
 - return result[rowIndex]
+
+## Best Time to Buy and Sell Stock (#121)
+- Pattern: single pass + track minimum
+- min_price = prices[0], max_profit = 0
+- each step: update min, then compute prices[i] - min
+- return max(0, max_profit)
+- mistake: else if for min — only one updated per step
+- mistake: max_profit not initialized to 0 — wrong starting value
