@@ -67,3 +67,9 @@
 - inner loop from j=1 to j<i (edges stay 1)
 - mistake: push_back before filling middle — pushes old version
 - mistake: j < i-1 instead of j < i — last middle element not filled
+
+## Pascal's Triangle II (#119)
+- same as 118 but return single row by index
+- loop until i <= rowIndex (not i < rowIndex)
+- push_back outside if block — otherwise rows 0 and 1 never added
+- return result[rowIndex]
