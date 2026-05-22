@@ -50,3 +50,11 @@
 - after loop: if (carry) result = "1" + result
 - mistake: nested loops = multiplication, not addition
 - mistake: accessing a[i] when i < 0 — always check if (i >= 0) first
+
+## Merge Sorted Array (#88)
+- Pattern: three pointers from end
+- when: merging two sorted arrays in-place
+- idea: compare from end, write larger to end of nums1
+- if i < 0 → take from nums2, if j < 0 → take from nums1
+- mistake: break when one array ends — need continue with remaining
+- mistake: k-- inside each if instead of once after assignment
