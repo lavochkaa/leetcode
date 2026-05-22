@@ -58,3 +58,12 @@
 - if i < 0 → take from nums2, if j < 0 → take from nums1
 - mistake: break when one array ends — need continue with remaining
 - mistake: k-- inside each if instead of once after assignment
+
+## Pascal's Triangle (#118)
+- Pattern: build each row from previous row
+- structure: vector<vector<int>>
+- each row size i+1, filled with ones
+- middle: row[j] = result[i-1][j-1] + result[i-1][j]
+- inner loop from j=1 to j<i (edges stay 1)
+- mistake: push_back before filling middle — pushes old version
+- mistake: j < i-1 instead of j < i — last middle element not filled

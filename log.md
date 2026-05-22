@@ -13,3 +13,4 @@
 ## Day 2 — 2026-05-22
 - #67 Add Binary
 - #88 Merge Sorted Array
+- (#118) Pascal's Triangle
