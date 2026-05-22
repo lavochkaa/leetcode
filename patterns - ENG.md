@@ -40,3 +40,13 @@
 - How: digits[i]++ → if < 10 return → else set 0, continue
 - After loop: insert(begin(), 1) for case [9,9,9] → [1,0,0,0]
 - Learned: cout can't print vector directly, use range-based for
+
+## Add Binary (#67)
+- Pattern: two pointers from end + carry
+- when: adding numbers represented as strings
+- s[i] - '0' → convert char to digit (otherwise you get ASCII value)
+- sum % 2 → current bit, sum / 2 → carry
+- result = digit + result → build from end, prepend each digit
+- after loop: if (carry) result = "1" + result
+- mistake: nested loops = multiplication, not addition
+- mistake: accessing a[i] when i < 0 — always check if (i >= 0) first
