@@ -17,3 +17,4 @@
 - (#119) Pascal's Triangle II
 - (#121) Best Time to Buy and Sell Stock
 - (#125) Valid Palindrome
+- (#136) Single Number

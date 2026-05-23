@@ -89,3 +89,9 @@
 - i < j — loop condition (not i <= j, middle element skipped)
 - mistake: compared s[i] instead of sorted[i]
 - mistake: j++ instead of j-- — pointers must move toward each other
+
+## Single Number (#136)
+- Pattern: XOR all elements
+- a ^ a = 0, a ^ 0 = a → pairs cancel out, single number remains
+- one loop, one variable result = 0
+- O(n) time, O(1) space
