@@ -21,3 +21,4 @@
 - (#125) Valid Palindrome
 - (#136) Single Number
 - (#168) Excel Sheet Column Title 
+- (#169) Majority Element

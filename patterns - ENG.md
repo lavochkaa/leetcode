@@ -103,3 +103,10 @@
 - result = char + result — prepend each character
 - i /= 26 — move to next digit
 - mistake: without i-- loop runs extra iteration when i is multiple of 26
+
+## Majority Element (#169)
+- Pattern: count with unordered_map
+- pass 1: map[num]++ — count each number
+- pass 2: pair.first = number, pair.second = count
+- if (pair.second > nums.size() / 2) → found it
+- auto& pair : map — auto ok when type is long and obvious from context
