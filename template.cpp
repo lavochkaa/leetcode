@@ -6,7 +6,6 @@
 class Solution {
 public:
     // Signature leetcode
-    
 };
 
 int main() {

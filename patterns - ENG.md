@@ -81,3 +81,11 @@
 - return max(0, max_profit)
 - mistake: else if for min — only one updated per step
 - mistake: max_profit not initialized to 0 — wrong starting value
+
+## Valid Palindrome (#125)
+- Pattern: two pointers + pre-filter string
+- isalnum(c) → letter or digit? tolower(c) → lowercase
+- filter into new string first, then two pointers i and j
+- i < j — loop condition (not i <= j, middle element skipped)
+- mistake: compared s[i] instead of sorted[i]
+- mistake: j++ instead of j-- — pointers must move toward each other
