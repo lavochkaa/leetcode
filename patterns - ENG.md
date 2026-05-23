@@ -95,3 +95,11 @@
 - a ^ a = 0, a ^ 0 = a → pairs cancel out, single number remains
 - one loop, one variable result = 0
 - O(n) time, O(1) space
+
+## Excel Sheet Column Title (#168)
+- Pattern: convert number to base-26 (A=1...Z=26)
+- i-- before % 26 — otherwise Z (26) causes extra iteration
+- char = 'A' + i % 26 after i--
+- result = char + result — prepend each character
+- i /= 26 — move to next digit
+- mistake: without i-- loop runs extra iteration when i is multiple of 26
