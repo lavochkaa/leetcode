@@ -22,3 +22,4 @@
 - (#136) Single Number
 - (#168) Excel Sheet Column Title 
 - (#169) Majority Element
+- (#171) Excel Sheet Column Number

@@ -110,3 +110,9 @@
 - pass 2: pair.first = number, pair.second = count
 - if (pair.second > nums.size() / 2) → found it
 - auto& pair : map — auto ok when type is long and obvious from context
+
+## Excel Sheet Column Number (#171)
+- Pattern: reverse of #168, string → number
+- c - 'A' + 1 → char to number (A=1, B=2, ... Z=26)
+- result = result * 26 + digit — shift left by one digit
+- iterate left to right (same as building decimal number)
