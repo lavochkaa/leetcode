@@ -16,6 +16,8 @@
 - (#118) Pascal's Triangle
 - (#119) Pascal's Triangle II
 - (#121) Best Time to Buy and Sell Stock
+
+## Day 3 - 2026-05-23
 - (#125) Valid Palindrome
 - (#136) Single Number
 - (#168) Excel Sheet Column Title 
