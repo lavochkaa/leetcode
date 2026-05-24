@@ -117,6 +117,15 @@
 - result = result * 26 + digit — shift left by one digit
 - iterate left to right (same as building decimal number)
 
+## Contains Duplicate (#217)
+- Pattern: unordered_set for uniqueness check
+- When: find any duplicate in an array
+- set.count(x) → 1 if exists, 0 if not
+- if count == 1 → duplicate found → return true
+- if not → insert and continue
+- return false after loop (no duplicates found)
+- Mistake: swapped return true/false — if element is already in set, that IS the duplicate
+
 ## Isomorphic Strings (#205)
 - Pattern: two unordered_maps for bidirectional character mapping
 - When: verify one-to-one correspondence between characters
