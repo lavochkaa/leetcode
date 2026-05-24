@@ -117,6 +117,15 @@
 - result = result * 26 + digit — shift left by one digit
 - iterate left to right (same as building decimal number)
 
+## Valid Anagram (#242)
+- Pattern: one unordered_map<char,int> + two passes
+- Pass 1: map[c]++ for each char in s
+- Pass 2: map[c]-- for each char in t, if map[c]==0 → return false
+- At end: return true
+- First check if (s.size() != t.size()) return false — otherwise extra chars in s go undetected
+- Mistake: second loop over map.size() instead of string t — map.size() is unique char count, not string length
+- Mistake: !map.empty() after loop — map is never empty, correct check is string lengths
+
 ## Summary Ranges (#228)
 - Pattern: single pass + track range start
 - When: group consecutive numbers into ranges

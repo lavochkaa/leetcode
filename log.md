@@ -29,3 +29,4 @@
 - (#217) Contains Duplicate
 - (#219) Contains Duplicate II
 - (#228) Summary Ranges
+- (#242) Valid Anagram
