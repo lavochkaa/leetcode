@@ -117,6 +117,18 @@
 - result = result * 26 + digit — shift left by one digit
 - iterate left to right (same as building decimal number)
 
+## Summary Ranges (#228)
+- Pattern: single pass + track range start
+- When: group consecutive numbers into ranges
+- start = nums[0], loop until size()-1 (last element handled after loop)
+- if nums[i]+1 != nums[i+1] → range ended → push_back, update start = nums[i+1]
+- after loop: add last range manually (compare start vs nums.back())
+- single number: start == nums[i] → to_string(start)
+- range: else → to_string(start) + "->" + to_string(nums[i])
+- Mistake: return {result} instead of return result — wraps vector inside another vector
+- Mistake: nums[0] without empty check → crash, add if (nums.empty()) return {}
+- Mistake: after loop push_back only nums.back() — last range loses its start
+
 ## Contains Duplicate II (#219)
 - Pattern: unordered_map<int,int> — number → last seen index
 - When: duplicate exists within distance k
