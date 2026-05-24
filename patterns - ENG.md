@@ -117,6 +117,14 @@
 - result = result * 26 + digit — shift left by one digit
 - iterate left to right (same as building decimal number)
 
+## Contains Duplicate II (#219)
+- Pattern: unordered_map<int,int> — number → last seen index
+- When: duplicate exists within distance k
+- If number in map: check i - map[num] <= k → return true
+- If not or distance too large: update map[num] = i
+- Mistake: did continue when distance > k — didn't update index, lost current position
+- Mistake: map.insert(x, y) — wrong syntax, correct is map[x] = y
+
 ## Contains Duplicate (#217)
 - Pattern: unordered_set for uniqueness check
 - When: find any duplicate in an array
