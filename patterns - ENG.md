@@ -116,3 +116,14 @@
 - c - 'A' + 1 → char to number (A=1, B=2, ... Z=26)
 - result = result * 26 + digit — shift left by one digit
 - iterate left to right (same as building decimal number)
+
+## Isomorphic Strings (#205)
+- Pattern: two unordered_maps for bidirectional character mapping
+- When: verify one-to-one correspondence between characters
+- Two maps: array[s[i]]=t[i] and map[t[i]]=s[i]
+- For each character: if key exists → check value matches, else return false
+- If key missing → record new mapping
+- Two independent if/else blocks — one for each map
+- Mistake: one map — misses case where two different s chars map to same t char
+- Mistake: && instead of || — each check is independent, either false → return false
+- Mistake: checking second map only inside first map's if — misses when s[i] is new but t[i] is already taken
