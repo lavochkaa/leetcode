@@ -30,3 +30,6 @@
 - (#219) Contains Duplicate II
 - (#228) Summary Ranges
 - (#242) Valid Anagram
+
+## Day 5 - 2026-05-25
+- (#257) Binary Tree Paths

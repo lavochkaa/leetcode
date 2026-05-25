@@ -155,6 +155,21 @@
 - return false after loop (no duplicates found)
 - Mistake: swapped return true/false — if element is already in set, that IS the duplicate
 
+## Binary Tree Paths (#257)
+- Pattern: DFS recursion on a tree
+- When: find all root-to-leaf paths
+- `TreeNode*` — pointer to node, access fields with `->` (not `.`)
+- Leaf — node where `left == nullptr && right == nullptr`
+- Base case: `if (node == nullptr) return;`
+- Update path: if `path` empty → `to_string(node->val)`, else `path + "->" + to_string(node->val)`
+- If leaf → `result.push_back(path)`
+- Else → `dfs(node->left, path); dfs(node->right, path);`
+- Recursive lambda: can't use `auto`, use `std::function<void(TreeNode*, std::string)>` + `#include <functional>`
+- Call after declaration: `dfs(root, "");`
+- Mistake: `||` instead of `&&` in leaf check — triggers when only one child is nullptr
+- Mistake: `node--` instead of `return` — pointer arithmetic, not a function exit
+- Mistake: `result += path` — result is a vector, use `result.push_back(path)`
+
 ## Isomorphic Strings (#205)
 - Pattern: two unordered_maps for bidirectional character mapping
 - When: verify one-to-one correspondence between characters

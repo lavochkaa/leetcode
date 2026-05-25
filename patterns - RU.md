@@ -153,6 +153,21 @@
 - return false после цикла (дубликатов не было)
 - ошибка: перепутал return true/false — если элемент есть в set, это и есть дубликат
 
+## Binary Tree Paths (#257)
+- Паттерн: DFS рекурсия по дереву
+- когда: нужно найти все пути от корня до листьев
+- `TreeNode*` — указатель на узел, поля через `->` (а не `.`)
+- лист — узел у которого `left == nullptr && right == nullptr`
+- базовый случай: `if (node == nullptr) return;`
+- обновляй путь: если `path` пустой → `to_string(node->val)`, иначе `path + "->" + to_string(node->val)`
+- если лист → `result.push_back(path)`
+- иначе → `dfs(node->left, path); dfs(node->right, path);`
+- рекурсивная лямбда: нельзя `auto`, нужно `std::function<void(TreeNode*, std::string)>` + `#include <functional>`
+- вызов после объявления: `dfs(root, "");`
+- ошибка: `||` вместо `&&` в проверке листа — срабатывает когда только один потомок nullptr
+- ошибка: `node--` вместо `return` — арифметика с указателем, не выход из функции
+- ошибка: `result += path` — result это вектор, нужно `result.push_back(path)`
+
 ## Isomorphic Strings (#205)
 - Паттерн: два unordered_map для двустороннего маппинга
 - когда: нужно проверить взаимно однозначное соответствие символов
