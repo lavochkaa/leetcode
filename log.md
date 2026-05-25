@@ -34,3 +34,4 @@
 ## Day 5 - 2026-05-25
 - (#257) Binary Tree Paths
 - (#268) Missing Number
+- (#283) Move Zeroes

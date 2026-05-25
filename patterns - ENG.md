@@ -155,6 +155,16 @@
 - return false after loop (no duplicates found)
 - Mistake: swapped return true/false — if element is already in set, that IS the duplicate
 
+## Move Zeroes (#283)
+- Pattern: two pointers (slow/fast)
+- When: move elements of one type to the end in-place
+- `shift` — where to write next non-zero element, starts at 0
+- Pass 1: if `nums[i] != 0` → `nums[shift] = nums[i]; shift++`
+- Pass 2: from `shift` to end → `nums[i] = 0`
+- Mistake: not filling zeros at the end — tail keeps garbage values
+- Mistake: `nums.insert(nums.back(), 0)` — insert takes an iterator, not a value
+- Mistake: condition `i > 0` instead of `i < nums.size()` — loop goes wrong direction
+
 ## Missing Number (#268)
 - Pattern: math sum
 - When: find missing element in range [0, n]
