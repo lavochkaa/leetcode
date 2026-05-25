@@ -35,7 +35,7 @@ public:
 
         };
         dfs(root, "");
-        
+
         return result;
     }
 };

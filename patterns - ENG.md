@@ -155,6 +155,15 @@
 - return false after loop (no duplicates found)
 - Mistake: swapped return true/false — if element is already in set, that IS the duplicate
 
+## Missing Number (#268)
+- Pattern: math sum
+- When: find missing element in range [0, n]
+- Sum from 0 to n: `n * (n + 1) / 2`
+- Answer: expected sum − actual sum of array elements
+- n = `nums.size()` — don't search for max element, array size is n
+- Mistake: using max element instead of array size — breaks when last element is missing
+- Mistake: not initializing `summ = 0` — undefined behavior
+
 ## Binary Tree Paths (#257)
 - Pattern: DFS recursion on a tree
 - When: find all root-to-leaf paths
