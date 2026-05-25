@@ -155,6 +155,16 @@
 - return false after loop (no duplicates found)
 - Mistake: swapped return true/false — if element is already in set, that IS the duplicate
 
+## Word Pattern (#290)
+- Pattern: two unordered_maps for bidirectional mapping (like #205)
+- When: verify one-to-one correspondence between pattern chars and words
+- Split string into words: `istringstream iss(s); while (iss >> word) words.push_back(word);`
+- First check `words.size() != pattern.size()` → return false
+- Two maps: `map<char, string>` and `map<string, char>`
+- For each i: if key exists and value doesn't match → return false, else record
+- Both blocks are independent in one loop
+- Mistake: one map — misses case where two chars map to same word
+
 ## Move Zeroes (#283)
 - Pattern: two pointers (slow/fast)
 - When: move elements of one type to the end in-place

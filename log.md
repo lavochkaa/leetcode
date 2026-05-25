@@ -35,3 +35,4 @@
 - (#257) Binary Tree Paths
 - (#268) Missing Number
 - (#283) Move Zeroes
+- (#290) Word Pattern 
