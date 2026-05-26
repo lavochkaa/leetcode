@@ -199,6 +199,14 @@
 - Mistake: `node--` instead of `return` — pointer arithmetic, not a function exit
 - Mistake: `result += path` — result is a vector, use `result.push_back(path)`
 
+## Intersection of Two Arrays (#349)
+- Pattern: unordered_set / unordered_map for intersection check
+- When: find common elements of two arrays without duplicates
+- Pass 1: put nums1 into map (or set)
+- Pass 2: if num exists in map → push_back + erase (to avoid adding twice)
+- erase removes key from map: map.erase(key)
+- map.count(key) → 1 if exists, 0 if not
+
 ## Reverse Vowels of a String (#345)
 - Pattern: two pointers moving toward each other, independent movement
 - When: swap only specific elements (not every pair)
