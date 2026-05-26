@@ -36,3 +36,6 @@
 - (#268) Missing Number
 - (#283) Move Zeroes
 - (#290) Word Pattern 
+
+## Day 6 - 2026-05-26
+- (#303) Range Sum Query - Immutable

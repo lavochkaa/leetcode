@@ -199,6 +199,18 @@
 - Mistake: `node--` instead of `return` — pointer arithmetic, not a function exit
 - Mistake: `result += path` — result is a vector, use `result.push_back(path)`
 
+## Range Sum Query - Immutable (#303)
+- Pattern: Prefix Sum
+- When: multiple range sum queries [left, right] on the same array
+- Idea: build prefix once in O(n), answer each query in O(1)
+- prefix[i] = sum of nums[0..i-1], prefix[0] = 0 (base)
+- sumRange(left, right) = prefix[right+1] - prefix[left]
+- prefix size = nums.size() + 1 (one extra so prefix[0]=0 always exists)
+- fill: prefix[i+1] = prefix[i] + nums[i]
+- class: constructor builds prefix once, method uses ready data
+- private field — can't be touched from outside, public method — interface
+- pass by & — no vector copy, passes address; don't store reference as field — unsafe
+
 ## Isomorphic Strings (#205)
 - Pattern: two unordered_maps for bidirectional character mapping
 - When: verify one-to-one correspondence between characters
