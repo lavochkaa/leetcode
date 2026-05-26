@@ -199,6 +199,15 @@
 - Mistake: `node--` instead of `return` — pointer arithmetic, not a function exit
 - Mistake: `result += path` — result is a vector, use `result.push_back(path)`
 
+## Reverse String (#344)
+- Pattern: two pointers moving toward each other
+- When: reverse an array/string in-place
+- i = 0, j = size()-1 — both in one for: i++, j--
+- swap via temp: temp = s[i]; s[i] = s[j]; s[j] = temp
+- condition: i < j (not i <= j — middle element needs no swap)
+- j = size()-1, not size() — otherwise out of bounds
+- curly braces required if loop body has more than one line
+
 ## Range Sum Query - Immutable (#303)
 - Pattern: Prefix Sum
 - When: multiple range sum queries [left, right] on the same array
