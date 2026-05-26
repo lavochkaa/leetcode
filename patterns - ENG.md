@@ -199,6 +199,15 @@
 - Mistake: `node--` instead of `return` — pointer arithmetic, not a function exit
 - Mistake: `result += path` — result is a vector, use `result.push_back(path)`
 
+## Reverse Vowels of a String (#345)
+- Pattern: two pointers moving toward each other, independent movement
+- When: swap only specific elements (not every pair)
+- i and j move independently — not in for(i++, j--), but manually inside if/else
+- if s[i] not vowel → i++, if s[j] not vowel → j--, both vowels → swap + i++ + j--
+- vowel check: static const std::string + find != npos
+- static const inside function — string created once, not on every call
+- without static → new std::string each call → slow
+
 ## Reverse String (#344)
 - Pattern: two pointers moving toward each other
 - When: reverse an array/string in-place
