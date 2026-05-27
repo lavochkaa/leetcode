@@ -46,3 +46,4 @@
 ## Day 7 - 2026-05-27
 - (#350) Intersection of Two Arrays II
 - (#383) Ransom Note
+- (#387) First Unique Character in a String
