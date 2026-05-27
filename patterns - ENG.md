@@ -207,6 +207,15 @@
 - erase removes key from map: map.erase(key)
 - map.count(key) → 1 if exists, 0 if not
 
+## Intersection of Two Arrays II (#350)
+- Pattern: unordered_map<int,int> — number → occurrence count
+- When: find common elements of two arrays preserving duplicates
+- Difference from #349: don't erase the key entirely, decrement the counter
+- Pass 1: map[num]++ for each num in nums1
+- Pass 2: if map.count(num) && map[num] > 0 → push_back + map[num]--
+- map.count(num) before map[num] > 0 — otherwise access creates the key with value 0
+- Mistake: only map.count(num) without > 0 — misses case when counter already reached zero
+
 ## Reverse Vowels of a String (#345)
 - Pattern: two pointers moving toward each other, independent movement
 - When: swap only specific elements (not every pair)

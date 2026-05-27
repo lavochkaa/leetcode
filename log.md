@@ -42,3 +42,6 @@
 - (#344) Reverse String
 - (#345) Reverse Vowels of a String
 - (#349) Intersection of Two Arrays
+
+## Day 7 - 2026-05-27
+- (#350) Intersection of Two Arrays II
