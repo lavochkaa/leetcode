@@ -47,3 +47,4 @@
 - (#350) Intersection of Two Arrays II
 - (#383) Ransom Note
 - (#387) First Unique Character in a String
+- (#389) Find the Difference
