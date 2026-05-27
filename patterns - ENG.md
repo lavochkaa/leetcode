@@ -207,6 +207,17 @@
 - erase removes key from map: map.erase(key)
 - map.count(key) → 1 if exists, 0 if not
 
+## Longest Palindrome (#409)
+- Pattern: frequency count + parity logic
+- When: build a palindrome from string characters, find max length
+- Pass 1: map[c]++ — count frequencies
+- Pass 2 over map: result += pair.second / 2 * 2 — take only the even part
+- After loop: if any letter has odd frequency → result++ (palindrome center)
+- Flag hasOdd = false, inside loop: if (pair.second % 2 != 0) hasOdd = true
+- Mistake: result++ inside loop for every odd letter — only one center allowed
+- Mistake: iterate over s instead of map — each letter counted as many times as it appears
+- if (has) not if (has == 1) — has is bool, comparing to 1 is redundant
+
 ## Intersection of Two Arrays II (#350)
 - Pattern: unordered_map<int,int> — number → occurrence count
 - When: find common elements of two arrays preserving duplicates
