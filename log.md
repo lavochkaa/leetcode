@@ -53,3 +53,4 @@
 
 ## Day 8 - 2026-05-28
 - (#405) Convert a Number to Hexadecimal
+- (#412) Fizz Buzz
