@@ -257,6 +257,17 @@
 - private field — can't be touched from outside, public method — interface
 - pass by & — no vector copy, passes address; don't store reference as field — unsafe
 
+## Convert a Number to Hexadecimal (#405)
+- Pattern: Bit Manipulation — mask + shift
+- When: convert a number to another base using bits
+- `(unsigned int)num` — cast to unsigned so `>>` is logical (fills with zeros), not arithmetic (fills with ones)
+- `u & 0xF` — extract last 4 bits (one hex digit, 0–15)
+- `u >>= 4` — shift to next group of bits
+- Lookup table: `std::string hex = "0123456789abcdef"`, index = digit value
+- `result = hex[digit] + result` — prepend each char so no reversal needed at the end
+- Edge case: `if (num == 0) return "0"` — loop won't run otherwise
+- Mistake: declaring `unsigned int num` instead of `unsigned int u = (unsigned int)num` — parameter name is already taken
+
 ## Isomorphic Strings (#205)
 - Pattern: two unordered_maps for bidirectional character mapping
 - When: verify one-to-one correspondence between characters
