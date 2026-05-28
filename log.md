@@ -51,6 +51,7 @@
 - (#392) Is Subsequence
 - (#409) Longest Palindrome
 
-## Day 8 - 2026-05-28
+## Day 8 - 2026-05-29
 - (#405) Convert a Number to Hexadecimal
 - (#412) Fizz Buzz
+- (#414) Third Maximum Number

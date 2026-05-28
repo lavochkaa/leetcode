@@ -257,6 +257,18 @@
 - private field — can't be touched from outside, public method — interface
 - pass by & — no vector copy, passes address; don't store reference as field — unsafe
 
+## Third Maximum Number (#414)
+- Pattern: std::set for unique sorted values
+- When: find k-th maximum among unique elements
+- `std::set<int>` stores only unique values, automatically sorted ascending
+- `set.insert(x)` — adds element, duplicates are ignored
+- `*set.rbegin()` — maximum (last element)
+- `*set.begin()` — minimum (first element)
+- For k-th from end: `auto it = set.end(); std::advance(it, -k); return *it;`
+- `std::advance` moves iterator by N positions (negative = backward)
+- Edge case: if fewer than 3 unique elements → `if (set.size() < 3) return *set.rbegin()`
+- Check `set.size()`, not `nums.size()` — duplicates are already removed
+
 ## Convert a Number to Hexadecimal (#405)
 - Pattern: Bit Manipulation — mask + shift
 - When: convert a number to another base using bits
